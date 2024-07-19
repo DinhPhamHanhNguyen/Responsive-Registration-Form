@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="infor personal">
+                <div class="fields1">
+                    <div class="input-field1">
+                        <label for="si">Student ID <span class="star">*</span></label>
+                        <input type="text" id="si" required>
+                    </div>
+                    <div class="input-field1">
+                        <label for="fname">Full Name <span class="star">*</span></label>
+                        <input type="text" id="fname" required>
+                    </div>
+                </div>
+                <div class="fields2">
+                    <div class="input-field">
+                        <label for="dob">Date of Birth<span class="star">*</span></label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div id="radio" class="input-field">
+                        <label>Gender<span class="star">*</span></label>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gen" value="Male" required>
+                            <label for="male" class="nor">Male</label>
+                            <input type="radio" id="female" name="gen" value="Female" required>
+                            <label for="female" class="nor">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tranfer">
+                <div class="sublist">
+                    <p>Subject list <span class="star">*</span></p>
+                    <ul id="son">
+                        <li>Introduction to Programming</li>
+                        <li>A+ Comprehensive</li>
+                        <li>Web Authoring I</li>
+                        <li>Introduction to Database Design</li>
+                        <li>Client-Side Scripting</li>
+                        <li>Programming I</li>
+                        <li>Project Management and Project+</li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <button type="button" onclick="tab1_To_tab2()">&gt;</button>
+                    <button type="button" onclick="tab2_To_tab1()">&lt;</button>
+                    <button type="button" onclick="tab1_To_tab2double()">&gt;&gt;</button>
+                    <button type="button" onclick="tab2_To_tab1double()">&lt;&lt;</button>
+                </div>
+                <div class="sublist">
+                    <p>Registration list <span class="star">*</span></p>
+                    <ul id="regis">
+                        <li id="firstsub"></li>
+                        <li id="secondsub"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <p id="required"><span class="star">*</span> Required</p>
+            <div class="confirmbutton">
+                <button type="button" id="registerButton">Submit</button>
+                <button type="button" onclick="add_To_table()">Registered table</button>
+            </div>
+        </form>
+        <div id="popup" class="popup">
+            <h2>Information</h2>
+            <p id="infor1"></p>
+            <p id="infor2"></p>
+            <p id="infor3"></p>
+            <p id="infor4"></p>
+            <p id="infor5">Registered subjects:</p>
+            <ul>
+                <li id="sub1"></li>
+                <li id="sub2"></li>
+            </ul>
+            <button onclick="closepop_up()">Close</button>
+        </div>
+        <table id="show">
+            <tr>
+                <th>Student ID</th>
+                <th>Full Name</th>
+                <th>DoB</th>
+                <th>Gender</th>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
